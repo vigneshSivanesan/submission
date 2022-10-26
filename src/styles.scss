@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+:root{
+    --input1:332px;
+    --input2:209px;
+} 
+body{
+    padding: 0;
+    margin: 0;
+}

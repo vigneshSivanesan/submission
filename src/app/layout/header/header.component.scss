@@ -1,0 +1,59 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background: #2188D9;
+    height: 72px;
+
+    h1 {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 130%;
+        color: #ffffff
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        span {}
+
+    }
+
+    .header_menu {
+
+        span {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 16px;
+            gap: 8px;
+
+            img {
+                height: 24px;
+            }
+
+            a {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 24px;
+                color: #fff
+            }
+
+            &:focus {
+                background: #1773BB;
+            }
+
+            &:nth-child(3) {
+                background: #1773BB;
+            }
+        }
+
+    }
+}

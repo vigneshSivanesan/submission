@@ -1,0 +1,50 @@
+<div class="whole_container">
+    <div class="top_component">
+        <h1>Submissions</h1>
+        <div class="filter-container">
+            <div class="search input-field">
+                <img src="../../../assets/svg/Search.svg">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="mat-select input-filed">
+                <ng-select [items]="forms" bindLabel="name" placeholder="Select form" class="ng_select">
+                </ng-select>
+            </div>
+
+            <div class="mat-select input-field">
+                <ng-select [items]="status" bindLabel="name" placeholder="Select status" class="ng_select">
+                </ng-select>
+            </div>
+            <div class="input-field">
+                <input class="date-picker" type="date" placeholder="24/12/2020">
+            </div>
+            <div class="input-field">
+                <mat-button-toggle-group name="toggle" aria-label="Font Style">
+                    <mat-button-toggle value="Map">Map</mat-button-toggle>
+                    <mat-button-toggle value="List">List</mat-button-toggle>
+                </mat-button-toggle-group>
+            </div>
+            <div class="input_span">
+                <img src="../../../assets/svg/Paper Download.svg">
+                <button>Export</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="second_content">
+        <div id="second_content_left">
+            <div *ngFor="let data of listArray">
+                <span>
+                    <h2>Work Flow: {{data.workFlow}}</h2>
+                    <button class={{data.status}}>{{data.status}} </button>
+                </span>
+                <span><a>From: </a><a>{{data.from}}</a></span>
+                <span><a>To: </a><a>{{data.to}}</a></span>
+                <span><a>Due Date: </a><a>{{data.date}}</a></span>
+            </div>
+        </div>
+
+        <div class="second_content_right" title="Map Area">
+             <app-map-area></app-map-area>
+        </div>
+    </div>
